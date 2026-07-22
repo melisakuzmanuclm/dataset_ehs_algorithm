@@ -1,4 +1,4 @@
-# Políticas de gestión energética
+# Políticas de gestión energética para sistemas Energy Harvesting: firmware, simulaciones y datasets
 
 Firmware, simulaciones y datasets asociados a la tesis doctoral *Técnicas de gestión eficiente de sistemas Energy Harvesting en entornos IoT orientadas a la neutralidad energética*.
 
@@ -21,7 +21,7 @@ Se incluyen tres algoritmos de gestión energética (**TB**, **G-PD** y **GRP-LA
 
 | Sigla | Nombre completo | Descripción breve |
 |---|---|---|
-| **TB** | Threshold Battery | Desisión tomadas por umbrales |
+| **TB** | Threshold Battery | Decisión tomadas por umbrales |
 | **G-PD** | Greedy - PD | Política Greedy con planificación del día previo |
 | **GRP-LAR** | Greedy - RP-GLAR | Política Greedy con replanificación GLAR |
 
@@ -136,6 +136,8 @@ Formato, unidades y criterios de limpieza documentados en `datasets/README.md`.
 
 ## Cita
 
+Si utilizas este material, cita la tesis y el repositorio:
+
 ```bibtex
 @phdthesis{kuzman2026,
   author = {Kuzman, Melisa},
@@ -143,15 +145,12 @@ Formato, unidades y criterios de limpieza documentados en `datasets/README.md`.
   school = {Universidad Nacional de Mar del Plata, Facultad de Ingeniería},
   year   = {2026}
 }
+
+@online{kuzman2026repo,
+  author       = {Kuzman, Melisa},
+  title        = {Políticas de gestión energética para sistemas Energy Harvesting: firmware, simulaciones y datasets},
+  year         = {2026},
+  organization = {GitHub},
+  url          = {https://github.com/melisakuzmanuclm/dataset_ehs_algorithm}
+}
 ```
-
----
-
-## Licencia
-
-[No hay] 
-
-
-## Contacto
-
-Melisa Kuzman — [correo]
