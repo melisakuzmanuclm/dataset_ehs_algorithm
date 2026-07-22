@@ -1,4 +1,4 @@
-# [Políticas de gestión energética]
+# Políticas de gestión energética
 
 Firmware, simulaciones y datasets asociados a la tesis doctoral *Técnicas de gestión eficiente de sistemas Energy Harvesting en entornos IoT orientadas a la neutralidad energética*.
 
@@ -21,9 +21,9 @@ Se incluyen tres algoritmos de gestión energética (**TB**, **G-PD** y **GRP-LA
 
 | Sigla | Nombre completo | Descripción breve |
 |---|---|---|
-| **TB** | [Threshold Battery] | [Desisión tomadas por umbrales] |
-| **G-PD** | [Greedy - PD] | [Política Greedy con planificación del día previo] |
-| **GRP-LAR** | [Greedy - RP-GLAR] | [Política Greedy con replanificación GLAR] |
+| **TB** | Threshold Battery | Desisión tomadas por umbrales |
+| **G-PD** | Greedy - PD | Política Greedy con planificación del día previo |
+| **GRP-LAR** | Greedy - RP-GLAR | Política Greedy con replanificación GLAR |
 
 ---
 
