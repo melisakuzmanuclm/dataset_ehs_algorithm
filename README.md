@@ -1,4 +1,4 @@
-# [Nombre del repositorio]
+# [Políticas de gestión energética]
 
 Firmware, simulaciones y datasets asociados a la tesis doctoral *Técnicas de gestión eficiente de sistemas Energy Harvesting en entornos IoT orientadas a la neutralidad energética*.
 
@@ -13,8 +13,7 @@ Se incluyen tres algoritmos de gestión energética (**TB**, **G-PD** y **GRP-LA
 | `firmware/` | Implementación embebida de los tres algoritmos |
 | `simulation/` | Scripts Python de simulación y análisis |
 | `datasets/` | Datos experimentales y de irradiancia |
-| `results/` | Figuras y salidas generadas |
-| `docs/` | Documentación adicional |
+
 
 ---
 
@@ -22,9 +21,9 @@ Se incluyen tres algoritmos de gestión energética (**TB**, **G-PD** y **GRP-LA
 
 | Sigla | Nombre completo | Descripción breve |
 |---|---|---|
-| **TB** | [Time-Based / completar] | [Una o dos líneas: criterio de decisión, entradas, salida] |
-| **G-PD** | [Greedy - ... / completar] | [ídem] |
-| **GRP-LAR** | [ídem] | [ídem] |
+| **TB** | [Threshold Battery] | [Desisión tomadas por umbrales] |
+| **G-PD** | [Greedy - PD] | [Política Greedy con planificación del día previo] |
+| **GRP-LAR** | [Greedy - RP-GLAR] | [Política Greedy con replanificación GLAR] |
 
 ---
 
@@ -63,7 +62,7 @@ Se incluyen tres algoritmos de gestión energética (**TB**, **G-PD** y **GRP-LA
 
 | Componente | Modelo | Notas |
 |---|---|---|
-| Microcontrolador | [Adafruit Feather M0 LoRa / RP2040] | |
+| Microcontrolador | [Adafruit Feather M0 LoRa] | |
 | Panel solar | [modelo, Voc, Isc, Pmax] | |
 | Batería | [química, capacidad] | |
 | Sensado de corriente | INA219 ×3 | panel / batería / carga |
@@ -150,11 +149,8 @@ Formato, unidades y criterios de limpieza documentados en `datasets/README.md`.
 
 ## Licencia
 
-[MIT / CC BY 4.0 / ...] — ver `LICENSE`.
+[No hay] 
 
-Sugerencia habitual: código bajo MIT o Apache-2.0, datasets bajo CC BY 4.0.
-
----
 
 ## Contacto
 
