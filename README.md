@@ -12,7 +12,7 @@ Se incluyen tres algoritmos de gestión energética (**TB**, **G-PD** y **GRP-LA
 |---|---|
 | `firmware/` | Implementación embebida de los tres algoritmos |
 | `simulation/` | Scripts Python de simulación y análisis |
-| `datasets/` | Datos experimentales y de irradiancia |
+| `datasets/` | Datos experimentales |
 
 
 ---
@@ -24,37 +24,6 @@ Se incluyen tres algoritmos de gestión energética (**TB**, **G-PD** y **GRP-LA
 | **TB** | Threshold Battery | Decisión tomadas por umbrales |
 | **G-PD** | Greedy - PD | Política Greedy con planificación del día previo |
 | **GRP-LAR** | Greedy - RP-GLAR | Política Greedy con replanificación GLAR |
-
----
-
-## Estructura del repositorio
-
-```
-.
-├── firmware/
-│   ├── tb/
-│   │   ├── tb.ino
-│   │   └── config.h
-│   ├── g_pd/
-│   └── grp_lar/
-│   └── common/              # drivers compartidos (INA219, RTC, LoRa)
-│
-├── simulation/
-│   ├── sim_tb.py
-│   ├── sim_g_pd.py
-│   ├── sim_grp_lar.py
-│   ├── common/              # modelos de batería, panel, carga
-│   └── requirements.txt
-│
-├── datasets/
-│   ├── raw/
-│   ├── processed/
-│   └── README.md            # descripción de columnas, unidades, periodo
-│
-├── results/
-├── LICENSE
-└── README.md
-```
 
 ---
 
@@ -75,82 +44,7 @@ Se incluyen tres algoritmos de gestión energética (**TB**, **G-PD** y **GRP-LA
 
 ### Requisitos
 
-- Arduino IDE [versión] o PlatformIO [versión]
-- Placa: [core y versión]
-- Librerías: [listar con versiones]
-
-### Compilación y carga
-
-```bash
-# ejemplo
-arduino-cli compile --fqbn <fqbn> firmware/tb
-arduino-cli upload  --fqbn <fqbn> -p <puerto> firmware/tb
-```
-
-### Configuración
-
-Parámetros ajustables en `config.h` (número de slots, duración de slot, planes de consumo, umbrales).
+- Arduino IDE o PlatformIO
+- Placa: Adafruit Cortex M0 RF65
 
 ---
-
-## Simulaciones
-
-### Instalación
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r simulation/requirements.txt
-```
-
-### Ejecución
-
-```bash
-python simulation/sim_tb.py --dataset datasets/processed/<archivo>.csv --out results/
-```
-
-| Argumento | Descripción | Por defecto |
-|---|---|---|
-| `--dataset` | Ruta al CSV de entrada | — |
-| `--out` | Directorio de salida | `results/` |
-
----
-
-## Datasets
-
-| Dataset | Ubicación | Periodo | Frecuencia de muestreo | Variables |
-|---|---|---|---|---|
-| [nombre] | [sitio] | [fechas] | [p. ej. 1 min] | [I, V, P, T, ...] |
-
-Formato, unidades y criterios de limpieza documentados en `datasets/README.md`.
-
----
-
-## Reproducción de los resultados de la tesis
-
-| Figura / Tabla | Script | Dataset |
-|---|---|---|
-| Fig. [n] | `simulation/[script].py` | `datasets/processed/[archivo]` |
-
----
-
-## Cita
-
-Si utilizas este material, cita la tesis y el repositorio:
-
-```bibtex
-@phdthesis{kuzman2026,
-  author = {Kuzman, Melisa},
-  title  = {Técnicas de gestión eficiente de sistemas Energy Harvesting en entornos IoT orientadas a la neutralidad energética},
-  school = {Universidad Nacional de Mar del Plata, Facultad de Ingeniería},
-  year   = {2026}
-}
-
-@online{kuzman2026repo,
-  author       = {Kuzman, Melisa},
-  title        = {Políticas de gestión energética para sistemas Energy Harvesting: firmware, simulaciones y datasets},
-  year         = {2026},
-  organization = {GitHub},
-  url          = {https://github.com/melisakuzmanuclm/dataset_ehs_algorithm}
-}
-```
