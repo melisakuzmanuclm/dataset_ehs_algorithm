@@ -31,7 +31,7 @@ Se incluyen tres algoritmos de gestión energética (**TB**, **G-PD** y **GRP-LA
 
 | Componente | Modelo | Notas |
 |---|---|---|
-| Microcontrolador | [Adafruit Feather M0 LoRa] | |
+| Microcontrolador | Adafruit Feather M0 LoRa | |
 | Panel solar | Potencia variable | |
 | Batería | Li-Po | Capacidad variable|
 | Sensado de corriente | INA219 ×3 | panel / batería / carga |
