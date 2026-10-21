@@ -14,7 +14,7 @@ datasets/
 ├── README.md
 ├── production_data/
 │   ├── Datos_nodo_ESI.csv          continuous characterization (~1 min)
-│   └── PV_production_dataset.csv   per-slot production (Voc, Isc, Pmax, temp)
+│   └── PV_production_dataset.csv   per-slot production (Voc, Isc, Pmax, temp) FF = 0.75
 └── algorithm_results/
     ├── 260710_GLAR_550.CSV         GRP-LAR run (node EH04)
     ├── 260710_PD_550.CSV           G-PD run    (node EH05)
